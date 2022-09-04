@@ -1,0 +1,62 @@
+section{
+    background-image: url("../Images/backgroundImg.png");
+    margin: 2rem 2rem 2rem 3rem;
+    border-radius: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+  
+}
+.form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    padding: .5em;
+    border-radius: 5px;
+    gap: 10px;
+}
+.form > input{
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    height:100%;
+    width: 100%;
+    background: url("../Images/briefcase-outline.svg") no-repeat ;
+}
+.form>input::placeholder{
+    font-weight: 400;
+    font-family: 'roboto';
+    color: #B9BDCF;
+}
+.form > input[type=text]{
+    font-family: 'roboto';
+    font-weight: 500;
+    color:  #282538;
+}
+button{
+   margin-left: auto;
+   
+   background: #1E86FF;
+   color: #fff;
+   border: none;
+   text-align: center;
+   padding: 14px 48px;
+   font-family: 'roboto';
+   font-weight: 500;
+   border-radius: 5px;
+}
+button:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    section{
+        padding: 1em;
+    }
+    .form{
+        width: 100%;
+    }
+    
+}

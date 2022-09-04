@@ -1,0 +1,55 @@
+aside{
+    margin: 0rem 0 2rem 4rem;
+    /* border: 1px solid red; */
+    width: 30%;
+}
+aside > h3{
+    font-weight: 700;
+    color:#B9BDCF;
+    font-family: 'poppins';
+    
+}
+
+.selection-box{
+display: flex;
+flex-direction: column;
+}
+.radio-container{
+    display: flex;
+    gap: .5em;
+    margin: .3rem 0 .4rem .6rem;
+    
+
+}
+.radio-container > label{
+    font-family: 'poppins';
+    font-weight: 500;
+    color: #334680;
+
+}
+.Input-Location{
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: .5em 0;
+    padding: 15px 40px;
+    background: url("../Images/earth-outline.svg") no-repeat #ffff ;
+    background-position: left 15px  top 15px;
+    background-size: 1rem;
+}
+input[type="checkbox"], input[type="radio"]{
+    border: none;
+}
+
+.Input-Location::placeholder{
+    font-weight: 400;
+    font-family: 'roboto';
+    color: #B9BDCF;
+}
+.Input-Location[type=text]{
+    font-family: 'roboto';
+    font-weight: 500;
+    color:  #282538;
+}
