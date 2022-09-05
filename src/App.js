@@ -3,6 +3,8 @@ import Header from './Components/Header';
 import InputSearch from './Components/InputSearch';
 import JobsList from './Components/JobsList';
 import LocationField from './Components/LocationField';
+import PageNavigation from './Components/PageNavigation';
+
 
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
       <Header />
       <InputSearch />
       <div className='container'>
-      <LocationField />
-      <JobsList />
+        <LocationField />
+        <JobsList />
       </div>
+      <PageNavigation />
     </div>
   );
 }

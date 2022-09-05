@@ -14,5 +14,5 @@ body{
 .container{
   display: flex;
   align-items: baseline;
-  gap: 1em;
+  gap: 2em;
 }

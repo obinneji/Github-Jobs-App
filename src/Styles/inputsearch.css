@@ -35,7 +35,7 @@ section{
     font-weight: 500;
     color:  #282538;
 }
-button{
+.search-button{
    margin-left: auto;
    
    background: #1E86FF;
@@ -47,7 +47,7 @@ button{
    font-weight: 500;
    border-radius: 5px;
 }
-button:hover{
+.search-button:hover{
     opacity: .7;
     cursor: pointer;
 }

@@ -7,7 +7,7 @@ const InputSearch = () => {
     <section>
       <div className='form'>
       <input type="text" placeholder="Titles,Companies, Expertse or Benefits"/>
-        <button>Search</button>
+        <button className='search-button'>Search</button>
       </div>
     </section>
     </>
