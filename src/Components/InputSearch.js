@@ -7,14 +7,16 @@ import JobsList from './JobsList';
 import LocationField from './LocationField';
 
 const InputSearch = () => {
+  // state declarations
   const [title,setTitle] = useState("frontend developer");
   const [page, setPage] = useState(2);
   const [data, setData] = useState([])
-  const {location,setLocation} = useState("UnitedStates");
-  const apiKey = '528c003783236d1bad50d26efaf827a3313408aa6a3a61763f240889b2fd9c93';
+  const [loading, setLoading] = useState(false);
+ // function to fetch  data
   const requestApi = async () => {
+    setLoading(true);
     try{
-     const res = await fetch(`https://corsproxy.io/?https://serpapi.com/search.json?engine=google_jobs&q=${title}&location=United+States&hl=en&start=${page}&api_key=${apiKey}`,
+     const res = await fetch(`https://corsproxy.io/?https://serpapi.com/search.json?engine=google_jobs&q=${title}&location=Nigeria&hl=en&start=${page}&api_key=${process.env.REACT_APP_SECRET_NAME}`,
           {
             method: "GET",
           }
@@ -22,11 +24,13 @@ const InputSearch = () => {
      const resData = await res.json()
      console.log(resData.jobs_results)
      setData(resData.jobs_results)
+     setLoading(false);
     } catch (err) {
       console.log(err);
     }
   }
-  const NavButtons = () => {
+  // pagination component
+  const Pagination = () => {
     const increasePage = () => {
       setPage(prevValve =>
         prevValve + 1 )
@@ -57,7 +61,6 @@ const InputSearch = () => {
       <button  className='page-button' onClick={firstPage}>1</button>
       <button className='active page-button' onClick={secondPage}>2</button>
       <button  className='page-button' onClick={thirdPage}>3</button>   
-      {/* <span>....</span> */}
       <button  className='page-button' onClick={lastPage}>10</button>
       <button  className='page-button' onClick={increasePage}>{<KeyboardArrowRightOutlinedIcon/>}</button>
       </div>
@@ -65,10 +68,11 @@ const InputSearch = () => {
   </div>
     )
   }
-   
+  //  Use Effect for rendering
+
+
   useEffect(() => {
     requestApi();
-
   }, [page])
   
 
@@ -78,7 +82,7 @@ const InputSearch = () => {
       <div className='form'>
       <input 
       type="text" 
-      placeholder="Titles,Companies, Expertse or Benefits"
+      placeholder="Titles and Companies"
       onChange={(event) => setTitle(event.target.value)}
       />
         <button className='search-button' onClick={requestApi}>Search</button>
@@ -86,13 +90,12 @@ const InputSearch = () => {
       </div>
       </div>
     </section>
-    {/* <LocationField /> */}
-    <JobsList data = {data} />
-    <NavButtons />
-
-  
+    <JobsList data = {data} loading = {loading} />
+    <Pagination />
     </>
   )
 }
 
 export default InputSearch
+
+

@@ -1,14 +1,23 @@
+
 ul{
     list-style: none;
 }
 li{
-    margin: 1em 0;
+    margin: 2em 0;
+    background-color: #fff;
+    border-radius: 10px;
 }
+
 .jobs-container{
-    width: 100%;
     margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+  
 }
 .job-detail-container{
+    flex-basis: 80%;
+    padding: 1em 1em;
     font-family: 'roboto';
     display: flex;
     background-color: #fff;
@@ -16,24 +25,26 @@ li{
 
 }
 
+
+
 .company-img{
-    width: 60px;
-    padding: .9rem;
+    width: 100px;
+    padding: 1rem;
     border-radius: 4px;
 }
 .company-img>img{
-    width: 100%;
+    width: 150%;
     height: 100%;
     border-radius: inherit;
 }
 .title-name{
     color: #334680;
-
+    margin-left: 40px;
 }
 .company-name{
     margin-top: 12px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 14px;
 }
 .job-title{
@@ -49,9 +60,12 @@ li{
     gap: 20px;
     color:  #B9BDCF;
     align-items: center;
+
+
 }
 .location-time >p{
     font-weight: normal;
+    
     font-size: 12px;
     line-height: 14px;
 }
@@ -63,13 +77,24 @@ li{
     font-weight: bold;
     font-size: 12px;
     text-align: center;
-    padding: .5em;
+    padding: 1em;
     border-radius: 4px;
-    /* margin-bottom: .3em; */
 }
 .location-container, .time-container{
     font-size: 12px;
     gap: 10px;
     display: flex;
     align-items: center;
+}
+
+.extention-time, .location{
+    margin-top: 15px;
+    align-self: center;
+}
+.des{
+    padding: 20px 50px;
+    color:  #334680;
+    font-weight: 400;
+    font-family: 'poppins';
+    line-height: 2;
 }
